@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liquid Gryphon 3 — Jabez Lewis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header class="site">
+<div class="wrap">
+<a href="../index.html" class="brand">Jabez Lewis</a>
+<nav class="primary">
+<a href="../index.html">Home</a>
+<a href="../projects.html" class="active">Projects</a>
+<a href="../cv.html">CV</a>
+<a href="../about.html">About</a>
+<a href="../contact.html">Contact</a>
+</nav>
+</div>
+</header>
+
+<section class="content-section">
+<div class="wrap wrap-narrow">
+<a href="../projects.html" class="back-link">← All projects</a>
+<span class="mono">LURA,  Sep 2025 – Jul 2026</span>
+<h2 style="margin-top:10px; margin-bottom:16px;">Liquid Gryphon 3</h2>
+<div class="skills-row">
+<span class="skill-tag">Propulsion Design</span>
+<span class="skill-tag">Fluid Analysis</span>
+<span class="skill-tag">CAD</span>
+<span class="skill-tag">NASA CEA</span>
+<span class="skill-tag">Teamwork</span>
+<span class="skill-tag">Test Campaigns</span>
+<span class="skill-tag">Proactivity</span>
+<span class="skill-tag">High-Pressure Working</span>
+</div>
+
+<div class="detail-block">
+<h3>Overview</h3>
+<p>The Gryphon 3 project set out to achieve the first liquid rocket launch from UK soil. Our goal was to combine the knowledge we had developed from building liquid engines in previous years, and take it a step further to design, and build a full bipropellant rocket. The ultimate goal of LURA's liquid programme is to develop a rocket that can reach the Kármán line — this was just the start.</p>
+<figure class="hero-media">
+<img src="../images/g3/aft_assembly.JPG" alt="Gryphon 3, fully assembled">
+<figcaption class="caption">Gryphon 3,  mid-assembly</figcaption>
+</figure>
+</div>
+
+<div class="detail-block">
+<h3>System Overview</h3>
+<ul class="spec-list">
+<li><span class="key">Thrust</span><span>3kN</span></li>
+<li><span class="key">Burn duration</span><span>3.5s</span></li>
+<li><span class="key">Wet mass</span><span>30kg</span></li>
+<li><span class="key">Propellant</span><span>Isopropyl alcohol/ Nitrous oxide</span></li>
+<li><span class="key">Fuel pressurisation</span><span>Regulated from a nitrogen COPV</span></li>
+<li><span class="key">Oxidiser pressurisation</span><span>Self-pressurising</span></li>
+<li><span class="key">Ignition</span><span>Solid rocket cartridge (Estes C6-0)</span></li>
+<li><span class="key">Engine</span><span>3D-printed AlSi10Mg, single pass regenerative cooling</span></li>
+<li><span class="key">Injector</span><span>ox-centred triplet impinging</span></li>
+<li><span class="key">Design to fire</span><span>6 months (with a redesign at 3 months)</span></li>
+</ul>
+</div>
+
+<div class="detail-block">
+<h3>Ignition System</h3>
+<p>I started in LURA as a propulsion engineer, responsible for the ignition system. This originally was planned to be a liquid ignitor, developing an in-house test bench alongside it.</p>
+<div class="extra-photo">
+<img src="../images/g3/liquid_ignitor.jpg" alt="Liquid ignitor test bench">
+<p class="caption">Liquid ignitor V1</p>
+</div>
+<p>When it became clear that the engine design needed more attention, we pivoted to a simpler solid ignitor. A CATO from a Klima motor inspired a change from stainless steel COTS parts to a custom machined aluminium casing (that we could do ourselves on the lathe) that would fail less energetically, and with a failure point built in so failure would be at a predictable location. A 1/4" BSPP port was machined in the top for a PT to take chamber pressure readings. </p>
+<figure class="hero-media">
+<img src="../images/g3/solid_ignitor.jpg" alt="Custom-machined aluminium ignitor casing">
+<figcaption class="caption">Custom-machined aluminium ignitor casing</figcaption>
+</figure>
+</div>
+
+<div class="detail-block">
+<h3>Injector</h3>
+<p>I designed an ox-centred triplet injector for the engine inspired by the requirement for more efficiency than we had seen with our previous years pintle injector. Despite poorer mixing from largely different stream flow rates, the outer fuel orifices would act as a secondary thermal barrier, in addition to our film cooling, to mitigate expected cooling issues.</p>
+<figure class="hero-media">
+<img src="../images/g3/injector_face.png" alt="Injector face, 12-element ox-centred triplet">
+<figcaption class="caption">Injector face — 12-element ox-centred triplet</figcaption>
+</figure>
+<p>To maximise simplicity of engine integration, the injector was designed as one part. This meant using a complex lattice structure to support the upper (ox) manifold while minimising flow impedance in the lower (fuel) manifold. Channelling oxidiser to the 12 individual injector orifices was achieved using individual downcomers, and the top manifold was fed from an angled inlet that maximised the distributions between elements. Long nights and lots of <a href="https://www.monsterenergy.com/en-us/energy-drinks/zero-sugar/zero-ultra/">energy drinks</a> paid off — my CAD skills grew a lot!</p>
+<div class="extra-photo">
+<img src="../images/g3/injector_cad_cut.png" alt="Injector CAD cross-section">
+<p class="caption">Injector CAD cross-section</p>
+</div>
+<p>The chamber brought interesting problems too. Modelling helical regenerative cooling channels with variable rib thickness was a great challenge where I managed to implement a fairly simple solution with multiple lofts between planes.</p>
+</div>
+
+<div class="detail-block">
+<h3>Feed System</h3>
+<p>In February 2026, I became the project Fluid Systems Lead. A team reshuffle allowed us to reflect on our goals for the project — we would need to simplify the design to achieve a summer test/launch. The main changes:</p>
+<ul class="spec-list">
+<li><span class="key">Engine</span><span>7kN to 3kN</span></li>
+<li><span class="key">Rocket diameter</span><span>8" to a 6"</span></li>
+</ul>
+<p>Small changes but a big impact. A lot of very valuable learning and planning had been done in the first semester, but now we needed to redesign the entire rocket...</p>
+<p>With my teammates helping with simulations, I redesigned the engine CAD in a week, before sending off for print. I wasn't starting from scratch and was able to add in some extra features such as a tapered volute for more even regen flow distribution and ribs for added strength at the throat.</p>
+<figure class="hero-media">
+<img src="../images/g3/clyde_closeup.jpg" alt="The redesigned engine, nicknamed Clyde">
+<figcaption class="caption">The redesigned engine — "Clyde"</figcaption>
+</figure>
+<p>I was then able to fully focus on the development of the rocket's tanks, pressurisation system, plumbing and system integration. The first stage was to work through the full system fluid requirements, building a full Excel sheet to model required volumes, ullages, pressures and flow rates across the vehicle.</p>
+<p>For the pressurisation system I sourced a <a href="https://www.justpaintball.co.uk/collections/hk-army/products/hk-army-alpha-air-tank-68ci-1-1l-4500psi-shadow">300Bar paintball tank</a>, and a <a href="https://valvesandregulators.aquaenvironment.com/viewitems/standard-flow-reducing-regulators/415-reducing-regulators-2">high flow scuba regulator</a> that were perfect for the application. All fittings except AN fittings on the COPV were <a href="https://www.hylokuk.com">Hylok</a> as they are significantly cheaper than standard Swagelok parts and I haven't had any issues with them! The forward bay also included a fill port, and a PRV for the IPA tank to protect from a regulator failure and tank overpressure.</p>
+<div class="extra-photo pair">
+<div class="extra-row">
+<img src="../images/g3/aft_bay.JPG" alt="Aft bay plumbing">
+<img src="../images/g3/fore_bay_clean.jpg" alt="Forward bay plumbing">
+</div>
+<p class="caption">Aft and fore bay plumbing (minus the regulator)</p>
+</div>
+<p>The custom tanks were designed to be stacked on top of one another, with a common outer wall and a common bulkhead separating them. Each tank had a static vent to allow depressurisation if contact was lost with the rocket (in Mojave they just shoot the tank!).</p>
+<div class="extra-photo pair">
+<div class="extra-row">
+<img src="../images/g3/g3_tank_cut.png" alt="Tank CAD cross-section">
+<img src="../images/g3/G3_tank.png" alt="Tank CAD">
+</div>
+<p class="caption">Tank CAD</p>
+</div>
+<p>The most unique challenge of the tanks was drilling the 16 radial holes required, as they had to be clocked to the threaded bulkhead holes on the inside. To drill the holes, I 3D-printed a PLA drilling jig with an 8mm drill bushing insert to protect the jig from the cutting edge and increase the lifespan of it — this took a long time to get right, but very satisfying when it worked!</p>
+<div class="extra-photo">
+<img src="../images/g3/tank_drilling_jig.jpg" alt="3D-printed drilling jig">
+<p class="caption">3D-printed drilling jig</p>
+</div>
+<p>And the final tank was assembled!</p>
+<figure class="hero-media">
+<img src="../images/g3/finished_tank.jpg" alt="Finished tank assembly">
+<figcaption class="caption">Finished tank assembly - the most satisfying part of the project</figcaption>
+</figure>
+<p>During this period, the team reshuffle had meant me stepping up to fill our empty chief engineer role. The fact this only happened mid-year meant that I missed out on the majority of the organisational management and was largely responsible for overseeing drawing releases, and system interfaces. The drawing pack for the liquid stack is here:</p>
+<div class="pdf-scroll">
+<img src="../images/g3/drawing_pack/page-01.jpg" alt="Drawing pack, page 1" loading="lazy">
+<img src="../images/g3/drawing_pack/page-02.jpg" alt="Drawing pack, page 2" loading="lazy">
+<img src="../images/g3/drawing_pack/page-03.jpg" alt="Drawing pack, page 3" loading="lazy">
+<img src="../images/g3/drawing_pack/page-04.jpg" alt="Drawing pack, page 4" loading="lazy">
+<img src="../images/g3/drawing_pack/page-05.jpg" alt="Drawing pack, page 5" loading="lazy">
+<img src="../images/g3/drawing_pack/page-06.jpg" alt="Drawing pack, page 6" loading="lazy">
+<img src="../images/g3/drawing_pack/page-07.jpg" alt="Drawing pack, page 7" loading="lazy">
+<img src="../images/g3/drawing_pack/page-08.jpg" alt="Drawing pack, page 8" loading="lazy">
+<img src="../images/g3/drawing_pack/page-09.jpg" alt="Drawing pack, page 9" loading="lazy">
+<img src="../images/g3/drawing_pack/page-10.jpg" alt="Drawing pack, page 10" loading="lazy">
+<img src="../images/g3/drawing_pack/page-11.jpg" alt="Drawing pack, page 11" loading="lazy">
+<img src="../images/g3/drawing_pack/page-12.jpg" alt="Drawing pack, page 12" loading="lazy">
+<img src="../images/g3/drawing_pack/page-13.jpg" alt="Drawing pack, page 13" loading="lazy">
+<img src="../images/g3/drawing_pack/page-14.jpg" alt="Drawing pack, page 14" loading="lazy">
+<img src="../images/g3/drawing_pack/page-15.jpg" alt="Drawing pack, page 15" loading="lazy">
+<img src="../images/g3/drawing_pack/page-16.jpg" alt="Drawing pack, page 16" loading="lazy">
+<img src="../images/g3/drawing_pack/page-17.jpg" alt="Drawing pack, page 17" loading="lazy">
+<img src="../images/g3/drawing_pack/page-18.jpg" alt="Drawing pack, page 18" loading="lazy">
+<img src="../images/g3/drawing_pack/page-19.jpg" alt="Drawing pack, page 19" loading="lazy">
+<img src="../images/g3/drawing_pack/page-20.jpg" alt="Drawing pack, page 20" loading="lazy">
+<img src="../images/g3/drawing_pack/page-21.jpg" alt="Drawing pack, page 21" loading="lazy">
+<img src="../images/g3/drawing_pack/page-22.jpg" alt="Drawing pack, page 22" loading="lazy">
+<img src="../images/g3/drawing_pack/page-23.jpg" alt="Drawing pack, page 23" loading="lazy">
+<img src="../images/g3/drawing_pack/page-24.jpg" alt="Drawing pack, page 24" loading="lazy">
+</div>
+<p class="caption"><a href="../g3_drawing_pack.pdf">Download the full PDF</a></p>
+</div>
+
+<div class="detail-block">
+<h3>Testing</h3>
+<p>Prior to final integration, we hydrostatically tested the tank to 75Bar (1.5x the design max pressure of 50Bar).</p>
+<div class="extra-photo">
+<img src="../images/g3/hydro_test_tank.jpg" alt="Hydrostatic test setup">
+<p class="caption">Hydrostatic test setup</p>
+</div>
+<p>We integrated the full system and took the rocket to the Sheffield Propulsion Laboratories' site for full stack testing.</p>
+<figure class="hero-media">
+<img src="../images/g3/full_stack.jpg" alt="Full stack at Sheffield Propulsion Laboratories">
+<figcaption class="caption">Full stack setup on the stand</figcaption>
+</figure>
+<p>A massive accomplishment just getting to the site... but as soon as we arrived there was an issue. We had designed the entire system for 50Bar nitrous however, evaporative cooling meant we could only achieve 35.</p>
+<div class="extra-photo">
+<img src="../images/g3/nox_tank.JPG" alt="Warming up the nitrous tank pre-fill">
+<p class="caption">Our attempt to warm up our nitrous pre-fill. With full PPE of course</p>
+</div>
+<p>Accepting we would have a lower thrust, we tuned the IPA pressure to manage the OF - too ox-rich and the combustion would be too hot, too fuel-rich and it wouldn't ignite. Indeed, ignition issues meant that we got a few more cold flows than expected...</p>
+<div class="video-embed">
+<div class="video-frame">
+<iframe src="https://www.youtube.com/embed/9az2SZS5hCI" title="Cold flow test" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<p class="caption">Cold flow test</p>
+</div>
+<p>Luckily our test campaign straddled a weekend. After failure to get a hot fire, we got back to the workshop and re-assessed. I made a comprehensive excel sheet to determine the required IPA set pressure for a given N2O pressure on the day — and therefore predict the engine's performance using NASA CEA data.</p>
+<p>When we returned on Monday, the rocket went straight onto the stand and were ready to start filling. Everything setup, everything ready to go. And we fired:</p>
+<div class="video-embed" id="hot-fire">
+<div class="video-frame">
+<iframe src="https://www.youtube.com/embed/RzF9mfvs5Is" title="Hot fire" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<p class="caption">Hot fire!! Nothing but smiles after this </p>
+</div>
+<p>It wasn't perfect, but we built a liquid rocket! Not steady state, but 1.1kN of thrust just days after a mistake that could have ended the project.</p>
+<div class="extra-photo">
+<img src="../images/g3/hot_fire_graph.jpg" alt="Hot fire thrust trace">
+<p class="caption">Hot fire thrust trace</p>
+</div>
+</div>
+
+<div class="detail-block">
+<h3>Next Steps</h3>
+<p>Ultimately, we were never going to be able to achieve the performance that we wanted without making hardware changes. Immediately following our test campaign, we sent our injector to have the nitrous orifices drilled out to increase the flow rate. The next available test slot is later this summer (2026), and so the team is working towards that. The dream to be the first liquid rocket launched from the UK is still alive!</p>
+<p>But bigger than that - as a team we built something not very many people have. We did a lot of troubleshooting, a lot of supplier sourcing and a lot of high-level architecture decisions that future teams won't have to. Documenting our process, the lessons learned and the mistakes made has brought LURA a few steps closer to a Kármán line liquid rocket. <a href="lox-pump.html">If only someone had built a pump for it…</a></p>
+</div>
+
+</div>
+</section>
+
+<footer class="site">
+<div class="wrap">
+<span class="mono">© 2026 Jabez Lewis</span>
+<div class="links mono">
+<a href="https://www.linkedin.com/in/jabezlewis">LinkedIn</a>
+<a href="mailto:me@jabezlewis.com">Email</a>
+</div>
+</div>
+</footer>
+
+</body>
+</html>

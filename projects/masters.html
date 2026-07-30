@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orbital Transfer Stage — Jabez Lewis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header class="site">
+<div class="wrap">
+<a href="../index.html" class="brand">Jabez Lewis</a>
+<nav class="primary">
+<a href="../index.html">Home</a>
+<a href="../projects.html" class="active">Projects</a>
+<a href="../cv.html">CV</a>
+<a href="../about.html">About</a>
+<a href="../contact.html">Contact</a>
+</nav>
+</div>
+</header>
+
+<section class="content-section">
+<div class="wrap wrap-narrow">
+<a href="../projects.html" class="back-link">← All projects</a>
+<span class="mono">University of Leeds, with Orbex,  Oct 2025 – Jun 2026</span>
+<h2 style="margin-top:10px; margin-bottom:16px;">Orbital Transfer Stage — Masters Project</h2>
+<div class="skills-row">
+<span class="skill-tag">Propulsion Systems</span>
+<span class="skill-tag">NASA CEA / RPA</span>
+<span class="skill-tag">Requirements Management</span>
+<span class="skill-tag">P&amp;ID Design</span>
+<span class="skill-tag">Team Leadership</span>
+</div>
+
+<div class="detail-block">
+<h3>Overview</h3>
+<p>Following my placement at Orbex, I took on a masters project with them — designing a Kick-Stage (or an Orbital Transfer Stage) for their micro-launcher, Prime. For our masters project we needed to be in a group, and so I was joined by three other engineers on my course. Between us we developed a conceptual design for a micro-launcher Kick-stage with a 400N engine, nitrous/propane propellant and a 500km circular orbit apogee. I was team lead, but personally responsible for the propulsion system.</p>
+</div>
+
+<div class="detail-block">
+<h3>Design &amp; Analysis</h3>
+<p>To start the project, I developed requirements from the limited specification provided by Orbex. To coordinate between the team, I implemented a requirements control document with unique requirement identifiers.</p><p>Using NASA CEA, I swept the resulting engine parameters over different OF ratios, chamber pressures and area ratios to determine the outcome of required system tradeoffs. One example is the expansion ratio vs the vacuum specific impulse vs the overall length of the engine.</p>
+<div class="extra-photo">
+<img src="../images/kick_stage/expansion_ratio.jpg" alt="Expansion ratio vs Isp and engine length chart">
+<p class="caption">Expansion ratio vs Isp and engine length</p>
+</div>
+<p>I implemented dual location film cooling to lower the maximum chamber wall temperature to below the limit of the chosen material (Niobium C-103).</p>
+<div class="extra-photo">
+<img src="../images/kick_stage/film_cooling.jpg" alt="Chamber wall temperature with and without film cooling">
+<p class="caption">Chamber wall temperature, with and without film cooling</p>
+</div>
+<p>Using RPA to finalise the design, I produced a 3D-model of the engine.</p>
+<figure class="hero-media">
+<img src="../images/kick_stage/kick_stage_engine.jpg" alt="3D model of the kick-stage engine">
+<figcaption class="caption">The finalised engine design</figcaption>
+</figure>
+<p>And developed a full vehicle P&amp;ID.</p>
+<div class="extra-photo">
+<img src="../images/kick_stage/kick_stage_pid.png" alt="Full vehicle P&ID">
+<p class="caption">Full vehicle P&amp;ID</p>
+</div>
+<p>Reflecting on the P&amp;ID now, I would use differential pressure sensors across the tanks to get a more precise pressure reading.</p>
+<p>The project was an interesting experience of multi-system management — I was fairly irritating to the tank responsible engineer, James, because the flow rate kept on changing. In the end I gave him the maximum value derived from the rocket equation with room to optimise if the project ever moved beyond conceptual.</p>
+<figure class="hero-media">
+<img src="../images/kick_stage/full_kick_stage.jpg" alt="Full kick-stage vehicle CAD model">
+<figcaption class="caption">The full kick-stage</figcaption>
+</figure>
+</div>
+
+</div>
+</section>
+
+<footer class="site">
+<div class="wrap">
+<span class="mono">© 2026 Jabez Lewis</span>
+<div class="links mono">
+<a href="https://www.linkedin.com/in/jabezlewis">LinkedIn</a>
+<a href="mailto:me@jabezlewis.com">Email</a>
+</div>
+</div>
+</footer>
+
+</body>
+</html>

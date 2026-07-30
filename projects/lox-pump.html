@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meela — Jabez Lewis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header class="site">
+<div class="wrap">
+<a href="../index.html" class="brand">Jabez Lewis</a>
+<nav class="primary">
+<a href="../index.html">Home</a>
+<a href="../projects.html" class="active">Projects</a>
+<a href="../cv.html">CV</a>
+<a href="../about.html">About</a>
+<a href="../contact.html">Contact</a>
+</nav>
+</div>
+</header>
+
+<section class="content-section">
+<div class="wrap wrap-narrow">
+<a href="../projects.html" class="back-link">← All projects</a>
+<span class="mono">LURA,  May 2026 – Jul 2026</span>
+<h2 style="margin-top:10px; margin-bottom:16px;">Meela</h2>
+<div class="skills-row">
+<span class="skill-tag">Pump &amp; Motor (Cryogenic) Design</span>
+<span class="skill-tag">Mechanical Design</span>
+<span class="skill-tag">GD&amp;T</span>
+<span class="skill-tag">Supplier Sourcing</span>
+<span class="skill-tag">Lathe Work</span>
+<span class="skill-tag">Creativity</span>
+</div>
+
+<div class="detail-block">
+<h3>Overview</h3>
+<p>Meela is an electric driven liquid oxygen pump targeting 3kg/s with a pressure rise of 40Bar with a 5Bar inlet pressure. The goal of LURA's liquid project (Silverback) is to build a rocket capable of reaching the Kármán line, which in our minds is best achieved with e-pumps. Meela is designed to be the step before a launch-ready pump — a non-flight weight, architecture demonstrator with a fully custom, submerged 25kW motor. It's pretty cool. Unfortunately, we didn't manage to test during our Race2Space slot due to a manufacturing issue, but we did get some valuable testing done, and everything pointed towards the design working!</p>
+<figure class="hero-media">
+<img src="../images/meela/meela_real.jpg" alt="Meela, fully assembled">
+<figcaption class="caption">Meela</figcaption>
+</figure>
+</div>
+
+<div class="detail-block">
+<h3>Design &amp; Manufacture</h3>
+<p>I joined Meela at the end of May 2026 after I had finished my exams for the year. I had spent the biggest chunk of my year working on <a href="g3.html">Gryphon 3</a>, and that had slowed down post exams as everyone recovered — I wanted more.</p>
+<p>Walking into the project, the largest remaining gap was the mechanical design. Me and a teammate Toby sat down and sprinted to the finish. Within a few days we had done the majority of the details, such as o-ring sizing, torque specs and key sizing all done.</p>
+<div class="extra-photo">
+<img src="../images/meela/meela.png" alt="Meela pump assembly CAD">
+<p class="caption">Pump assembly CAD</p>
+</div>
+<p>The next challenge was finding suppliers for all of the parts. The timeline of the project left us a very small amount of time and, of course being a student project, with no money! The answer I found was China. Within a week all of the designs were sent away across five different suppliers, except the volute casing. Multiple suppliers told me it would be impossible to machine — I now know that they just meant difficult. I found a supplier in China who was able to machine this part in 3 days, with a 2-day delivery to the UK.</p>
+<figure class="hero-media">
+<img src="../images/meela/volute_casing.JPG" alt="Machined volute casing">
+<figcaption class="caption">Machined volute casing</figcaption>
+</figure>
+<p>The assembly of Meela was unlike any other project I had worked on. Away from the comfort of swaging tubes, I was getting to grips with epoxy. Choosing to manufacture the motor in-house was an absolute pain and ultimately the reason that we missed our test date, but I learnt so much doing it, and loved the challenge.</p>
+<p>Epoxying together individual stator laminations required careful thought about the jig used. Ideally it would be able to be put in the oven for a quicker cure with better thermal properties, while also applying an even clamping force to maximise the stacking factor.</p>
+<div class="extra-photo">
+<img src="../images/meela/lamination_stack.jpg" alt="Stator laminations, clamped in the jig">
+<p class="caption">Stator laminations, clamped in the jig</p>
+</div>
+<p>We then had to wind the stator. I didn't do this myself, but I was responsible for calculating the required number of strands, packing factor and current density to achieve our required performance without melting the copper. Heat transfer was an interesting problem. As the motor was submerged in LOX, we had a significant cooling benefit, however, this was coupled with the increased losses from the rotor spinning through a particularly viscous fluid. An orifice in the outlet of the pump allowed us to control the amount of LOX flowing through the stator and thus control the cooling capacity of the system.</p>
+<figure class="hero-media">
+<img src="../images/meela/cut_stator.jpg" alt="Cut open copper on the broken stator">
+<figcaption class="caption">We cut open the copper on our broken stator</figcaption>
+</figure>
+<p>In the manufacturing process of the pump, I spent some time learning how to use a lathe. I manufactured magnet shoulders for the shaft and turned down the stacked laminations to achieve a close fit in the casing, among a few other miscellaneous bits.</p>
+<div class="extra-photo">
+<img src="../images/meela/shaft.jpg" alt="Magnet shoulder on the shaft">
+<p class="caption">One of the magnet shoulders on the shaft</p>
+</div>
+<div class="extra-photo">
+<img src="../images/meela/lathe_selfie.JPG" alt="Turning down the laminations on the lathe">
+<p class="caption">Me turning down the laminations</p>
+</div>
+<p>We managed to do some compatibility testing with LOX.</p>
+<figure class="hero-media">
+<img src="../images/meela/lox_test.jpg" alt="LOX compatibility testing">
+<figcaption class="caption">LOX compatibility testing</figcaption>
+</figure>
+<p>And we did get the rotor spinning to 3000rpm (limited by the rigidity of our improvised setup). This was also done in an early stator where the phases were unbalanced, hence the noise!</p>
+<div class="video-embed">
+<div class="video-frame">
+<iframe src="https://www.youtube.com/embed/VfJvzgd-55Y" title="Rotor spin test" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<p class="caption">Rotor spin test</p>
+</div>
+</div>
+
+<div class="detail-block">
+<h3>Reflection</h3>
+<p>Above all, this project taught me persistence and creativity. With such a short timeline, we were able to make a huge amount of progress and solve countless problems that I have never seen before. Persistence in chasing suppliers, finding exactly what is pushing up lead time, learning new skills to see the project over the line. Creativity in approaching brand new problems and solving them with no money or time.</p>
+<div class="extra-photo">
+<img src="../images/meela/solder_pot.jpg" alt="Improvised solder pot">
+<p class="caption">One evening we needed to make a solder pot... we used what we had</p>
+</div>
+<p>Of course, I also developed hard skills - largely lathe work, mechanical design, and the associated drawings and tolerancing. 40,000rpm, 45Bar, 244A, 110K. A small, complex design that ended up being rather elegant. See the drawing pack below.</p>
+<div class="pdf-scroll">
+<img src="../images/meela/drawing_pack/page-01.jpg" alt="Drawing pack, page 1" loading="lazy">
+<img src="../images/meela/drawing_pack/page-02.jpg" alt="Drawing pack, page 2" loading="lazy">
+<img src="../images/meela/drawing_pack/page-03.jpg" alt="Drawing pack, page 3" loading="lazy">
+<img src="../images/meela/drawing_pack/page-04.jpg" alt="Drawing pack, page 4" loading="lazy">
+<img src="../images/meela/drawing_pack/page-05.jpg" alt="Drawing pack, page 5" loading="lazy">
+<img src="../images/meela/drawing_pack/page-06.jpg" alt="Drawing pack, page 6" loading="lazy">
+<img src="../images/meela/drawing_pack/page-07.jpg" alt="Drawing pack, page 7" loading="lazy">
+<img src="../images/meela/drawing_pack/page-08.jpg" alt="Drawing pack, page 8" loading="lazy">
+<img src="../images/meela/drawing_pack/page-09.jpg" alt="Drawing pack, page 9" loading="lazy">
+<img src="../images/meela/drawing_pack/page-10.jpg" alt="Drawing pack, page 10" loading="lazy">
+<img src="../images/meela/drawing_pack/page-11.jpg" alt="Drawing pack, page 11" loading="lazy">
+<img src="../images/meela/drawing_pack/page-12.jpg" alt="Drawing pack, page 12" loading="lazy">
+<img src="../images/meela/drawing_pack/page-13.jpg" alt="Drawing pack, page 13" loading="lazy">
+<img src="../images/meela/drawing_pack/page-14.jpg" alt="Drawing pack, page 14" loading="lazy">
+<img src="../images/meela/drawing_pack/page-15.jpg" alt="Drawing pack, page 15" loading="lazy">
+<img src="../images/meela/drawing_pack/page-16.jpg" alt="Drawing pack, page 16" loading="lazy">
+<img src="../images/meela/drawing_pack/page-17.jpg" alt="Drawing pack, page 17" loading="lazy">
+<img src="../images/meela/drawing_pack/page-18.jpg" alt="Drawing pack, page 18" loading="lazy">
+<img src="../images/meela/drawing_pack/page-19.jpg" alt="Drawing pack, page 19" loading="lazy">
+<img src="../images/meela/drawing_pack/page-20.jpg" alt="Drawing pack, page 20" loading="lazy">
+<img src="../images/meela/drawing_pack/page-21.jpg" alt="Drawing pack, page 21" loading="lazy">
+</div>
+<p class="caption"><a href="../meela_drawing_pack.pdf">Download the full PDF</a></p>
+</div>
+
+</div>
+</section>
+
+<footer class="site">
+<div class="wrap">
+<span class="mono">© 2026 Jabez Lewis</span>
+<div class="links mono">
+<a href="https://www.linkedin.com/in/jabezlewis">LinkedIn</a>
+<a href="mailto:me@jabezlewis.com">Email</a>
+</div>
+</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Environmental Test Chamber — Jabez Lewis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header class="site">
+<div class="wrap">
+<a href="../index.html" class="brand">Jabez Lewis</a>
+<nav class="primary">
+<a href="../index.html">Home</a>
+<a href="../projects.html" class="active">Projects</a>
+<a href="../cv.html">CV</a>
+<a href="../about.html">About</a>
+<a href="../contact.html">Contact</a>
+</nav>
+</div>
+</header>
+
+<section class="content-section">
+<div class="wrap wrap-narrow">
+<a href="../projects.html" class="back-link">← All projects</a>
+<span class="mono">University of Leeds, with AWE,  Oct 2023 – Jun 2024</span>
+<h2 style="margin-top:10px; margin-bottom:16px;">Environmental Test Chamber — Bachelors Project</h2>
+<div class="skills-row">
+<span class="skill-tag">Embedded Control (Arduino/I2C)</span>
+<span class="skill-tag">PID Control</span>
+<span class="skill-tag">Sensor Integration</span>
+<span class="skill-tag">Electronics</span>
+</div>
+
+<div class="detail-block">
+<h3>Overview</h3>
+<p>As part of my bachelors individual engineering project, I was tasked with developing an environmental test chamber for analysing tribological interfaces. What started as a tribological project, evolved into a full system development for a cost-effective method of humidity and oxygen content control for a chamber. The system managed to vary humidity between 5% and 95% to +/- 0.7%, and reduce oxygen concentration to below 1%.</p>
+</div>
+
+<div class="detail-block">
+<h3>Hardware</h3>
+<p>This project was the first time that I developed a full electronic control system, and so I endeavoured to keep it as simple as possible — part of the aim was to develop a cost-effective solution using existing lab equipment, so it aligned well. I selected an Arduino for the control system, with all communication protocols as I2C.</p>
+<figure class="hero-media">
+<img src="../images/test-chamber/test_system_schematic.jpg" alt="Control system circuit schematic">
+<figcaption class="caption">The control system schematic</figcaption>
+</figure>
+<p>The system used two solenoid valves, controlling flow through a wet and a dry beaker to manage to humidity where the inlet fluid was nitrogen to displace the oxygen through the humidity control process. All my circuitry was done using a breadboard so I could get to grips with different components quickly.</p>
+<figure class="hero-media">
+<img src="../images/test-chamber/breadboard_circuit.jpg" alt="Breadboard circuit with solenoid valves, Arduino, and control knob">
+<figcaption class="caption">Breadboard circuit</figcaption>
+</figure>
+<p>Inside the test environment (a hermetically sealed box) I placed a relative humidity sensor, an oxygen sensor and a fan next to the inlet to distribute the flow around the chamber. It was critical that the oxygen sensor did not get wet, and therefore it was placed upside down on the roof of the box. The outlet hole for the wires was sealed with hot glue.</p>
+<figure class="hero-media">
+<img src="../images/test-chamber/test_chamber.jpg" alt="Sealed test chamber with sensors and fan">
+<figcaption class="caption">The sealed test environment</figcaption>
+</figure>
+<p>Target humidity was set using a control knob mounted to a potentiometer, with real-time values relayed to an LCD screen mounted to the same panel.</p>
+<figure class="hero-media">
+<img src="../images/test-chamber/control_panel.jpg" alt="Control panel with LCD screen and knob">
+<figcaption class="caption">The control panel</figcaption>
+</figure>
+<p>As the solenoid valves were normally closed, during extended operation (for example to achieve a high humidity setpoint), they would get quite warm. To mitigate this, I implemented control logic that surged with 12V to open the valves, and then hold at 7V, managing to keep their temperature within limits.</p>
+<p>Another issue was the sensor calibration. I filled the test chamber with desiccant that I dried the night before and set the humidity sensor to have that reading as perfectly arid. This did appear to work, although I had no calibrated sensor with which I could compare - if I was to do the project again, this is the first place I'd improve.</p>
+<figure class="hero-media">
+<img src="../images/test-chamber/lots_of_dessicant.jpg" alt="Test chamber filled with desiccant for humidity sensor calibration">
+<figcaption class="caption">Calibrating the humidity sensor with dried desiccant</figcaption>
+</figure>
+</div>
+
+<div class="detail-block">
+<h3>Performance</h3>
+<figure class="hero-media">
+<img src="../images/test-chamber/test_setup_labelled.png" alt="Final labelled test setup, showing chamber, sensors, control panel, and gas supply">
+<figcaption class="caption">The final setup</figcaption>
+</figure>
+<div class="video-embed">
+<div class="video-frame">
+<iframe src="https://www.youtube.com/embed/MOakTY7XUVs" title="Test chamber in operation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<p class="caption">Not <a href="g3.html#hot-fire">the most exciting video</a>, I will admit</p>
+</div>
+<div class="extra-photo">
+<img src="../images/test-chamber/humidty_results.jpg" alt="Humidity control response graph">
+<p class="caption">Humidity control response</p>
+</div>
+<div class="extra-photo">
+<img src="../images/test-chamber/oxygen_results.jpg" alt="Oxygen concentration response graph">
+<p class="caption">Oxygen concentration response</p>
+</div>
+<p>At the time this project was the most involved, multi-discipline system that I had worked on. Fluids, electronics and control systems were all new to me, but I managed to get them all to work for a final effective system.</p>
+</div>
+
+</div>
+</section>
+
+<footer class="site">
+<div class="wrap">
+<span class="mono">© 2026 Jabez Lewis</span>
+<div class="links mono">
+<a href="https://www.linkedin.com/in/jabezlewis">LinkedIn</a>
+<a href="mailto:me@jabezlewis.com">Email</a>
+</div>
+</div>
+</footer>
+
+</body>
+</html>
