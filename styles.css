@@ -336,13 +336,15 @@ nav.primary a.active {
 
 .content-section h2 {
   font-size: clamp(1.5rem, 3vw, 2rem);
-  margin-bottom: 20px;
+  line-height: 1.15;
+  margin-bottom: 8px;
 }
 
 .content-section .lede {
   font-size: 1.02rem;
   color: var(--ink-soft);
   max-width: 60ch;
+  margin-top: 0;
   margin-bottom: 32px;
 }
 
